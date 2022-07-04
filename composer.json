@@ -1,0 +1,39 @@
+{
+    "name": "brunocfalcao/lettrz",
+    "description": "Laravel email templates blocks inspired by the Postmark email templates",
+    "keywords": [
+        "brunocfalcao",
+        "postmark"
+    ],
+    "homepage": "https://github.com/brunocfalcao/lettrz",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bruno Falcão",
+            "email": "bruno.c.falcao@brunofalcao.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brunocfalcao\\Lettrz\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brunocfalcao\\Lettrz\\LettrzServiceProvider"
+            ]
+        }
+    }
+}
