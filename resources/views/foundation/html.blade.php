@@ -154,6 +154,6 @@
     </head>
     <body yahoo="fix" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
         <span class="preheader">{!! $preheader !!}</span>
-        @include('lettrz::foundation.block-iterator')
+        @include('lettrz::foundation.block-iterator', ['type' => 'html'])
     </body>
 </html>

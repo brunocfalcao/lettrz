@@ -28,9 +28,33 @@ Route::get('lettrz/test', function () {
 
     $mail = new TestLettrz();
 
-    $mail->add('menu37', ['caption' => 'Bruno']);
+    $mail->add('spacer');
 
-    Mail::to('bruno.falcao@live.com')->send($mail);
+    $mail->add('menu37', [
+        'foreground-color' => '#FF3F3F'
+    ]);
+
+    $mail->add('text2', [
+        'title' => 'Mastering Nova is yours',
+        'paragraphs' => ['Thank you for buying my course! I wish you have
+                         as much pleasure to learn from it as I had while
+                         making it. It took me +300 hours to complete this
+                         course and got it by 1/100 of the price that it
+                         cost me. But that is okay! Appreciate it!',
+                        '<b>Check out my other courses too! You can get 25%
+                        discount on any of them henceforth!</b>'],
+        'button' => [
+            'width' => '350',
+            'text' => 'Click here to reset your password',
+            'url' => 'https://www.publico.pt',
+            'background-color' => '#326CFF',
+            'text-color' => '#FFFFFF'
+        ]
+    ]);
+
+    $mail->add('spacer');
+
+    //Mail::to('bruno.falcao@live.com')->send($mail);
 
     return $mail;
 });

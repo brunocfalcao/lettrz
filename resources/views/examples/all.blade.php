@@ -2903,7 +2903,7 @@
         </table>
         <!--Menu 36 End-->
         <!--Menu 37 Start-->
-        <h1 align="center" style="font-family: Roboto; color: yellow">blocks.menu37 (in progress)</h1>                                
+        <h1 align="center" style="font-family: Roboto; color: green">blocks.menu37 (completed)</h1>                                
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#333">
             <tr>
                 <td align="center" valign="top">
@@ -18243,6 +18243,7 @@
         </table>
         <!--Text 1 End-->
         <!--Text 2 Start-->
+        <h1 align="center" style="font-family: Roboto; color: yellow">blocks.text2 (in progress)</h1>
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#333">
             <tr>
                 <td align="center" valign="top">

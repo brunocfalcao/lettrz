@@ -1,1 +1,1 @@
-@include('lettrz::foundation.block-iterator')
+@include('lettrz::foundation.block-iterator', ['type' => 'text'])
