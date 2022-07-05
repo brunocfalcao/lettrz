@@ -1,3 +1,24 @@
+{{--
+
+$mail->add('text2', [
+        'title' => 'Mastering Nova is yours',
+        'paragraphs' => ['Thank you for buying my course! I wish you have
+                         as much pleasure to learn from it as I had while
+                         making it. It took me +300 hours to complete this
+                         course and got it by 1/100 of the price that it
+                         cost me. But that is okay! Appreciate it!',
+                        '<b>Check out my other courses too! You can get 25%
+                        discount on any of them henceforth!</b>'],
+        'button' => [
+            'width' => '350',
+            'text' => 'Click here to reset your password',
+            'url' => 'https://www.publico.pt',
+            'background-color' => '#326CFF',
+            'text-color' => '#FFFFFF'
+        ]
+    ]);
+
+--}}
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="{{ $parameters['background-color'] }}">
     <tr>
         <td align="center" valign="top">
