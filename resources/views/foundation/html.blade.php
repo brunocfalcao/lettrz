@@ -154,13 +154,6 @@
     </head>
     <body yahoo="fix" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
         <span class="preheader">{!! $preheader !!}</span>
-        @foreach($blocks as $block)
-        <x-dynamic-component
-            :component="'lettrz::blocks.'.$block['component'].'-html'"
-            :parameters="$block['parameters']"
-            :uuid="$uuid"
-            :preheader="$preheader"
-        />
-        @endforeach
+        @include('lettrz::foundation.block-iterator')
     </body>
 </html>

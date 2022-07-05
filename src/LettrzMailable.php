@@ -4,11 +4,10 @@ namespace Brunocfalcao\Lettrz;
 
 use Brunocfalcao\Lettrz\Models\Lettrz as LettrzModel;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class Lettrz extends Mailable implements ShouldQueue
+class LettrzMailable extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -58,7 +57,7 @@ class Lettrz extends Mailable implements ShouldQueue
     {
         $parameters = array_merge($this->defaultKeys(), $parameters);
 
-        $this->blocks[] = ['component' => $component,
+        $this->blocks[] = ['component'  => $component,
                            'parameters' => $parameters];
 
         return $this;
@@ -78,14 +77,15 @@ class Lettrz extends Mailable implements ShouldQueue
     {
         /**
          * -- View in Browser implementation --
-         * There is not a linear way to store the mailable content, so
-         * the idea is to save the blocks parameter data into the database
-         * and then recreate the mailable with the blocks data.
          *
-         * .. not a perfect solution, but it works for now ..
+         * I could use the $this->buildViewData() for a quick content storage
+         * but to avoid a mass growth data into the database I prefer to
+         * only store the blocks data, and recreate the mailable again
+         * using the saved blocks. The database size will not grow
+         * in an unpredictable way (I hope!).
          */
 
-        if (config('lettrz.view-in-browser') == true) {
+        if (config('lettrz.view-in-browser.enabled') == true) {
             $instance = new LettrzModel();
 
             $instance->blocks = $this->blocks;

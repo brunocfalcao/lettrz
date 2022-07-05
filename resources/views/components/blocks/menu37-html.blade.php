@@ -9,9 +9,6 @@ $mail->add('menu37', [
 	'caption' => 'Your right sidehand text', default date('F j, Y')
 ]);
 
-The view in browser URL is calculated automatically, by default:
-<your-app-url>/lettrz/view/<uuid code>
-
 --}}
 <!--Menu 37 Start-->
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="{{ $parameters['background-color'] }}">
