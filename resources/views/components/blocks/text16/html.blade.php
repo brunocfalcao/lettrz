@@ -12,6 +12,8 @@ $mail->add('text2', [
                     '<b>Check out my other courses too! You can get 25%
                     discount on any of them henceforth!</b>'],
 
+    'image-url' => url('vendor/mastering-nova/images/580x250.jpg'),
+
     'button' => [
         'width' => '350',
         'text' => 'Click here to reset your password',
@@ -22,6 +24,7 @@ $mail->add('text2', [
 ]);
 
 --}}
+
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="{{ $parameters['background-color'] }}">
     <tr>
         <td align="center" valign="top">
@@ -30,13 +33,19 @@ $mail->add('text2', [
                     <td align="center" valign="middle" bgcolor="{{ $parameters['foreground-color'] }}">
                         <table width="580" border="0" align="center" cellpadding="0" cellspacing="0" class="two-left-inner">
                             <tr>
-                                <td height="65" align="center" valign="middle" style="font-size:35px; line-height:35px;">&nbsp;</td>
+                                <td height="85" align="center" valign="middle" style="font-size:85px; line-height:85px;">&nbsp;</td>
                             </tr>
                             <tr>
                                 <td align="center" valign="top" class="two-left">
                                     <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" valign="top" style="font-family:Verdana, Geneva, sans-serif; font-size:26px; color: {{ $parameters['lettering-bold-color'] }}; font-weight:normal; line-height:40px; text-transform:none;" mc:edit="um20-04">
+                                            <td align="center" valign="top"><img editable="true" mc:edit="um20-100"  src="{{ $parameters['image-url'] }}" width="580" height="250" alt="" style="display:block;width:100% !important; height:auto !important; " /></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="35" align="center" valign="top" style="line-height:35px; font-size:35px;">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" valign="top" style="font-family:Verdana, Geneva, sans-serif; font-size:26px; color:{{ $parameters['lettering-bold-color'] }}; font-weight:normal; line-height:40px; text-transform:none;" mc:edit="um20-101">
                                                 <multiline>{!! $parameters['title'] !!}</multiline>
                                             </td>
                                         </tr>
@@ -44,7 +53,7 @@ $mail->add('text2', [
                                             <td height="15" align="left" valign="top" style="font-size:15px; line-height:15px;">&nbsp;</td>
                                         </tr>
                                         <tr>
-                                            <td align="left" valign="top" style="font-family:'Open Sans', Verdana, Arial; font-size:14px; font-weight:normal; color:{{ $parameters['lettering-paragraph-color'] }}; line-height:30px;" mc:edit="um20-05">
+                                            <td align="left" valign="top" style="font-family:'Open Sans', Verdana, Arial; font-size:14px; font-weight:normal; color:{{ $parameters['lettering-paragraph-color'] }}; line-height:30px;" mc:edit="um20-102">
                                                 @foreach($parameters['paragraphs'] as $paragraph)
                                                 <multiline>
                                                     {!! $paragraph !!}

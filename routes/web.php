@@ -34,7 +34,7 @@ Route::get('lettrz/test', function () {
         'foreground-color' => '#FF3F3F'
     ]);
 
-    $mail->add('text2', [
+    $mail->add('text16', [
         'title' => 'Mastering Nova is yours',
         'paragraphs' => ['Thank you for buying my course! I wish you have
                          as much pleasure to learn from it as I had while
@@ -43,6 +43,9 @@ Route::get('lettrz/test', function () {
                          cost me. But that is okay! Appreciate it!',
                         '<b>Check out my other courses too! You can get 25%
                         discount on any of them henceforth!</b>'],
+
+        'image-url' => url('vendor/mastering-nova/images/580x250.jpg'),
+
         'button' => [
             'width' => '350',
             'text' => 'Click here to reset your password',
@@ -51,6 +54,8 @@ Route::get('lettrz/test', function () {
             'text-color' => '#FFFFFF'
         ]
     ]);
+
+    $mail->add('copyright11');
 
     $mail->add('spacer');
 
