@@ -55,7 +55,10 @@ Route::get('lettrz/test', function () {
         ]
     ]);
 
-    $mail->add('copyright11');
+    $mail->add('copyright11', ['foreground-color' => '#A8A8A8',
+                               'caption' => 'Mastering Nova -',
+                               'lettering-unsubscribe-color' => '#F76F6F',
+                               'unsubscribe-url' => 'https://www.laravel.com']);
 
     $mail->add('spacer');
 
